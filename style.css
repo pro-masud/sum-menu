@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* header part start */
+header{
+    width:100%;
+    min-width: 66px;
+    padding: 0 100px;
+    background-color: #343334;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sticky-top{
+    position: sticky;
+    top: 0;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 25px;
+    color: #fff;
+    letter-spacing: 2px;
+
+}
+header .logo img{
+    max-width: 160px;
+}
+
+header ul{
+    position: relative;
+}
+
+header ul li{
+    position: relative;
+    float: left;
+    transition: .4s;
+}
+
+header ul li a{
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: .4s;
+}
+
+header ul li a:hover {
+    background: #692269;
+}
+
+header ul li a i{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+header ul li > ul{
+    position: absolute;
+    left:0;
+    width:200px;
+    background: #343334;
+    display: none;
+    transition: 1s;
+}
+
+header ul li.active ul.sub-menu{
+    display: block;
+}
+
+header ul li ul li{
+    position: relative;
+    width: 100%;
+    background: #e99ee9;
+    border: 1px solid #fff;
+}
+header ul li ul li ul{
+    top:0;
+    left:200px;
+    display: none;
+}
+header ul li ul li.show-menu ul{
+    display: block;
+}
+
+.menuToggle{
+    display: none;
+}
