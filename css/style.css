@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+}
+
+section{
+    padding: 100px 0;
+}
+
+
+/* header part start */
+header{
+    width:100%;
+    min-width: 66px;
+    padding: 0 100px;
+    background-color: #343334;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sticky-top{
+    position: sticky;
+    top: 0;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 25px;
+    color: #fff;
+    letter-spacing: 2px;
+
+}
+header .logo img{
+    max-width: 160px;
+}
+
+
+header ul li{
+    position: relative;
+    float: left;
+}
+
+header ul li a{
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    transition: .4s;
+}
+
+nav ul.hidemenu{
+    display: none;
+}
+
+header ul li a:hover {
+    background: #692269;
+}
+
+header ul li a i{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+header ul li.active ul li.show-menu b{
+    transition: .4s;
+    transform: rotate(45deg);
+}
+
+header ul li > ul.sub-menu{
+    position: absolute;
+    left:0;
+    width:200px;
+    background: #343334;
+    transition: 1s;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+   
+}
+
+header ul li.active ul.sub-menu{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+header ul li ul li{
+    width: 100%;
+    background: #e99ee9;
+    border-bottom: 1px solid #fff;
+}
+header ul li ul li:last-child{
+    border:none;
+}
+
+header ul li ul li ul{
+    position: absolute;
+    width: 200px;
+    top:0;
+    left:202px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+header ul li ul li.show-menu ul{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0px);
+}
+
+.menuToggle{
+    display: none;
+}
+
+.close span:nth-child(2){
+    display: none;
+}
+.close span:nth-child(1){
+    transform: rotate(45deg);
+    margin: -2px;
+}
+.close span:nth-child(3){
+    transform: rotate(315deg);
+    margin: -2px;
+}
+
+/*hero section start*/
+.hero{
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c9c9c9;
+    padding: 100px 0;
+}
+
+.hero-content{
+    text-align: center;
+}
+
+.hero-content h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+}
+
+.hero-content p{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.hero-content a{
+    background: #333;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.section-left{
+    width: 49%;
+}
+
+.section-left img{
+    width: 100%;
+}
+.section-right{
+    width: 49%;
+}
+
+.section-content{
+    padding: 0 40px;
+}
+
+.section-content h2{
+    font-size: 20px;
+}

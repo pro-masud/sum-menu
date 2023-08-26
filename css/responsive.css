@@ -1,0 +1,92 @@
+@media (max-width: 991px) {
+    header{
+        padding: 10px 20px;
+    }
+
+    header nav{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background:skyblue;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(20px);
+        transition: .7s;
+    }
+
+    .navbar{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0px);
+    }
+
+    header nav ul li{
+        width: 100%;
+    }
+
+    header nav ul li > ul.sub-menu{
+        position: relative;
+        width: 100%;
+        left: 0;
+        display: none;
+    }
+
+    header ul li.active ul.sub-menu{
+        display: block;
+    }
+
+    header nav ul li ul li ul{
+        left: 0;
+        position: relative;
+        transform: translateX(0px);
+        width:100%;
+        display: none;
+        opacity: display .5s;
+    }
+
+    header ul li ul li.show-menu ul{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0px);
+        display: block;
+        width:100%;
+    }
+
+
+    .menuToggle{
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: block;
+    }
+
+    .menuToggle span{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        line-height: 20px;
+        margin: 6px 0;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .about-us .row{
+        flex-direction: column;
+    }
+
+    .about-us .row .section-left{
+        width: 100%;
+    }
+
+    .about-us .row .section-right{
+        width: 100%;
+        margin-top:20px;
+    }
+}
